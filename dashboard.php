@@ -21,11 +21,11 @@ if (!isset($_SESSION['name'])) {
 
     <body id="dashboard-body">
         <?php
-    $req = $database->prepare("SELECT * FROM items WHERE user = :user");
-    $req -> bindValue(":user", $_SESSION['id']);
-    $req -> execute();
-    $item_list = $req->fetchAll();
-    ?>
+        $req = $database->prepare("SELECT * FROM items WHERE user = :user");
+        $req -> bindValue(":user", $_SESSION['id']);
+        $req -> execute();
+        $item_list = $req->fetchAll();
+        ?>
             <div class="header">
                 <div class="container">
                     <h1>Dashboard</h1>
@@ -72,15 +72,15 @@ if (!isset($_SESSION['name'])) {
                             </div>
                             <div class="average-quantity">
                                 <?php $total_quantity = 0;
-                        foreach($item_list as $single_item):
-                            $total_quantity = $total_quantity + $single_item->quantity;
-                        endforeach;
-                        if($item_count == 0){
-                            $average_quantity = 0;
-                        }
-                        else{
-                        $average_quantity = $total_quantity / $item_count;}
-                        ?>
+                                foreach($item_list as $single_item):
+                                    $total_quantity = $total_quantity + $single_item->quantity;
+                                endforeach;
+                                if($item_count == 0){
+                                    $average_quantity = 0;
+                                }
+                                else{
+                                    $average_quantity = $total_quantity / $item_count;}
+                                ?>
                                     <h2><?=round($average_quantity)?></h2>
                                     <p>average quantity per pastry</p>
                             </div>
@@ -102,15 +102,15 @@ if (!isset($_SESSION['name'])) {
                                     </thead>
                                     <tbody>
                                         <?php
-                                    $query = $database->prepare("SELECT * FROM items WHERE user = :user ORDER BY quantity ASC");
-                                    $query -> bindValue(":user", $_SESSION['id']);
-                                    $query -> execute();
-                                    $sorted_items = $query->fetchAll();
-                                    
-                                    $i = 1;
-                                    foreach($sorted_items as $_sorted_item):
+                                            $query = $database->prepare("SELECT * FROM items WHERE user = :user ORDER BY quantity ASC");
+                                            $query -> bindValue(":user", $_SESSION['id']);
+                                            $query -> execute();
+                                            $sorted_items = $query->fetchAll();
+                                            
+                                            $i = 1;
+                                            foreach($sorted_items as $_sorted_item):
                                 
-                                ?>
+                                        ?>
                                             <tr>
                                                 <td>
                                                     <?= $_sorted_item->pastry?>
@@ -126,8 +126,8 @@ if (!isset($_SESSION['name'])) {
                                                 </td>
                                             </tr>
                                             <?php 
-                                    if ($i++ == 5) break;
-                                    endforeach;?>
+                                            if ($i++ == 5) break;
+                                            endforeach;?>
                                     </tbody>
                                 </table>
                             </div>
