@@ -1,0 +1,124 @@
+@import 'components/header.css';
+@import 'components/side-bar.css';
+@import 'components/content.css';
+.dashboard-content {
+    margin-top: 30px;
+}
+
+.dashboard-content .container .dashboard-divs div.different-pastries,
+.dashboard-content .container .dashboard-divs div.average-quantity,
+.dashboard-content .container .dashboard-divs div.total-pastries {
+    width: 25%;
+    height: 150px;
+    margin: 30px 40px 20px 40px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 5px;
+    display: inline-block;
+    text-align: center;
+}
+
+@media (max-width: 800px) {
+    .dashboard-content .container .dashboard-divs div.different-pastries,
+    .dashboard-content .container .dashboard-divs div.average-quantity,
+    .dashboard-content .container .dashboard-divs div.total-pastries {
+        width: 100%;
+        margin: 10px auto;
+        display: block;
+    }
+}
+
+.dashboard-content .container .dashboard-divs div h2 {
+    font-size: 25px;
+    font-weight: bold;
+    margin: 20px;
+}
+
+.dashboard-content .container .dashboard-divs div p {
+    font-size: 20px;
+}
+
+.dashboard-content .container .dashboard-divs div.low-quantities {
+    width: 100%;
+    text-align: left;
+    margin: 30px auto;
+    padding: 10px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+@media (max-width: 800px) {
+    .dashboard-content .container .dashboard-divs div.low-quantities {
+        margin: 10px auto;
+        display: block;
+    }
+}
+
+.dashboard-content .container .dashboard-divs div.low-quantities h2 {
+    display: inline-block;
+}
+
+.dashboard-content .container .dashboard-divs div.low-quantities a {
+    text-decoration: none;
+    text-transform: none;
+}
+
+.dashboard-content .container .dashboard-divs div.low-quantities table {
+    margin: 20px auto;
+    width: 90%;
+}
+
+@media (max-width: 800px) {
+    .dashboard-content .container .dashboard-divs div.low-quantities table {
+        margin: 15px auto;
+    }
+}
+
+.dashboard-content .container .dashboard-divs div.low-quantities table thead {
+    font-weight: bold;
+}
+
+.dashboard-content .container .dashboard-divs div.low-quantities table tbody tr {
+    width: 100%;
+}
+
+.dashboard-content .container .dashboard-divs div.low-quantities table tbody tr:nth-of-type(odd) {
+    background-color: #fad8b9;
+    border: 1px solid #fad8b9;
+}
+
+.dashboard-content .container .dashboard-divs div.low-quantities table tbody tr:nth-of-type(even) {
+    background-color: transparent;
+    border: 1px solid #fad8b9;
+}
+
+.dashboard-content .container .dashboard-divs div.low-quantities table td,
+.dashboard-content .container .dashboard-divs div.low-quantities table th {
+    width: 25%;
+    padding: 10px;
+}
+
+@media (max-width: 800px) {
+    .dashboard-content .container .dashboard-divs div.low-quantities table td,
+    .dashboard-content .container .dashboard-divs div.low-quantities table th {
+        padding: 0px;
+    }
+}
+
+.dashboard-content .container .dashboard-divs div.pastries-map {
+    width: 100%;
+    margin: 40px auto 50px auto;
+    background-color: white;
+    padding: 10px;
+}
+
+@media (max-width: 800px) {
+    .dashboard-content .container .dashboard-divs div.pastries-map {
+        display: none;
+    }
+}
+
+.dashboard-content .container .dashboard-divs div.pastries-map div.countries {
+    opacity: 0;
+    font-size: 0.1px;
+}

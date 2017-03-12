@@ -1,0 +1,7 @@
+@import 'base/reset.css';
+@import 'base/base.css';
+@import 'pages/index-style.css';
+@import 'pages/dashboard-style.css';
+@import 'pages/inventory-style.css';
+@import 'pages/settings-style.css';
+

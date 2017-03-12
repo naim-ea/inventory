@@ -1,0 +1,11 @@
+.content {
+    width: 93vw;
+    height: 100vh;
+    float: right;
+}
+
+@media (max-width: 1000px) {
+    .content{
+        width: 100vw;
+    }
+}

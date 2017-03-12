@@ -1,0 +1,134 @@
+@import 'components/header.css';
+@import 'components/side-bar.css';
+@import 'components/content.css';
+.welcome-message {
+    margin-top: 20px;
+}
+
+.welcome-message .container h2 {
+    font-size: 36px;
+}
+
+.settings-content {
+    margin-top: 20px;
+}
+
+.settings-content .container .manage-users {
+    width: 100%;
+    background-color: white;
+    padding: 20px;
+    position: relative;
+}
+
+.settings-content .container h3 {
+    font-size: 30px;
+}
+
+.settings-content .container .manage-users table {
+    width: 50%;
+    margin: 20px auto;
+}
+
+@media (max-width: 800px) {
+    .settings-content .container .manage-users table {
+        width: 100%;
+        margin: 10px auto;
+    }
+}
+
+.settings-content .container .manage-users table thead {
+    font-weight: bold;
+}
+
+.settings-content .container .manage-users table tbody tr {
+    width: 100%;
+}
+
+.settings-content .container .manage-users table tbody tr:nth-of-type(odd) {
+    background-color: #fad8b9;
+    border: 1px solid #fad8b9;
+}
+
+.settings-content .container .manage-users table tbody tr:nth-of-type(even) {
+    background-color: transparent;
+    border: 1px solid #fad8b9;
+}
+
+.settings-content .container .manage-users table td,
+.settings-content .container .manage-users table th {
+    width: 25%;
+    padding: 10px;
+}
+
+@media (max-width: 800px) {
+    .settings-content .container .manage-users table td,
+    .settings-content .container .manage-users table th {
+          padding: 0px;
+    }
+}
+
+.settings-content .container .manage-currency {
+    width: 100%;
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+    position: relative;
+}
+
+.settings-content .container .manage-currency p {
+    margin: 20px;
+    display: inline-block;
+}
+
+.settings-content .container .manage-currency select {
+    margin: 20px;
+    color: #bfbfbf;
+    border: 1px solid #e6e6e6;
+}
+
+.settings-content .container .manage-currency button {
+    color: white;
+    background: #2abd21;
+    padding: 20px;
+    line-height: 0;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+
+.settings-content .container .manage-currency button:hover {
+    cursor: pointer;
+}
+
+#user-manage-body .content .action {
+    position: absolute;
+    background: white;
+    width: 30%;
+    height: 40%;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    text-align: center;
+    padding: 20px;
+}
+
+#user-manage-body .content .action h3 {
+    font-size: 25px;
+    margin-bottom: 30px;
+}
+
+#user-manage-body .content .action input {
+    width: 100%;
+    border: 1px solid #e6e6e6;
+    border-radius: 7px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+#user-manage-body .content .action button {
+    color: white;
+    background: #2abd21;
+    padding: 15px;
+    border-radius: 7px;
+    line-height: 0;
+}
