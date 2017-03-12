@@ -46,6 +46,4 @@ I did an inventory for people to manage their business stocks from the inside. T
 
 ### TO DO
 * [ ] More stats
-* [ ] Flash notifications
-* [ ] Website editable settings
-* [ ] Basic front-end interface
+* [ ] Less dirty code
