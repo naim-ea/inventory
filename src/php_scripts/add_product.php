@@ -33,7 +33,7 @@ if(!empty($_POST) || is_numeric($added_quantity) ||  is_numeric($added_price)){
 
 
     //MOVE PHOTO TO OTHER FOLDER
-    move_uploaded_file($_FILES['photo']['tmp_name'], DOCROOT.'/src/img/items-img/'.basename($_FILES['photo']['name']));
+    move_uploaded_file($_FILES['photo']['tmp_name'], DOCROOT.'/img/items-img/'.basename($_FILES['photo']['name']));
     
     
     

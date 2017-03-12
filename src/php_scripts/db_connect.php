@@ -4,7 +4,7 @@ define('DB_HOST','localhost');
 define('DB_NAME','inventory');
 define('DB_USER','root');
 define('DB_PASS','root'); 
-define('DOCROOT', $_SERVER['DOCUMENT_ROOT'].'/inventory');
+define('DOCROOT', dirname(__FILE__, 2));
 
 try
 {

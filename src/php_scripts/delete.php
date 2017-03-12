@@ -6,7 +6,7 @@ session_start();
 $id = $_POST['id'];
 $delete_pastry = $_POST['pastry'];
 $delete_country = $_POST['country'];
-$delete_img = DOCROOT."/src/img/items-img/".$delete_pastry.$delete_country.'.jpg';
+$delete_img = DOCROOT."/img/items-img/".$delete_pastry.$delete_country.'.jpg';
 
 //CHECK IF IMAGE EXISTS AND DELETE IT
 if(file_exists ($delete_img)){

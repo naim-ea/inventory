@@ -21,7 +21,7 @@ if(!empty($_POST) || is_numeric($added_quantity) ||  is_numeric($added_price)){
         $fetch = $req->fetchAll();
         foreach($fetch as $_fetch):
         //IF NOT, RENAME IT WITH NEW NAME AND COUNTRY
-        rename(DOCROOT."/src/img/items-img/".$_fetch->pastry.$_fetch->country.".jpg", DOCROOT."/src/img/items-img/".$change_pastry.$change_country.".jpg");
+        rename(DOCROOT."/img/items-img/".$_fetch->pastry.$_fetch->country.".jpg", DOCROOT."/img/items-img/".$change_pastry.$change_country.".jpg");
         endforeach;
         
         $req = $database->prepare("UPDATE items SET pastry = :pastry, country = :country, description = :description, quantity = :quantity, price = :price, photo = :photo WHERE id = :id AND user = :user");
@@ -39,7 +39,8 @@ if(!empty($_POST) || is_numeric($added_quantity) ||  is_numeric($added_price)){
         //IF YES, UPLOAD IT TO THE GOOD FOLDER AND CHANGE ITS NAME WITH PASTRY AND COUNTRY
         $_FILES['photo']['name'] = $change_pastry.$change_country.'.jpg';
         $change_photo = $_FILES['photo']['name'];
-        move_uploaded_file($_FILES['photo']['tmp_name'], DOCROOT.'/src/img/items-img/'.basename($_FILES['photo']['name']));
+        //MOVE PHOTO TO OTHER FOLDER
+        move_uploaded_file($_FILES['photo']['tmp_name'], DOCROOT.'/img/items-img/'.basename($_FILES['photo']['name']));
         
         $req = $database->prepare("UPDATE items SET pastry = :pastry, country = :country, description = :description, quantity = :quantity, price = :price, photo = :photo WHERE id = :id AND user = :user");
         $req->bindValue(':pastry', $change_pastry);
