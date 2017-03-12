@@ -4,7 +4,7 @@ define('DB_HOST','localhost');
 define('DB_NAME','inventory');
 define('DB_USER','root');
 define('DB_PASS','root'); 
-define('DOCROOT', $_SERVER['DOCUMENT_ROOT'].'/H2P2020-EL_AYADI-Naïm-Inventaire');
+define('DOCROOT', $_SERVER['DOCUMENT_ROOT'].'/inventory');
 
 try
 {
